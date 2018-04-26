@@ -5,6 +5,10 @@ Created on Tue Apr 24 22:33:23 2018
 
 @author: gabrielzezze
 """
+import json
+with open('teste.txt','r') as arquivo:
+    Estoque = json.loads(arquivo.read())
+    
 ValorTotalEstoque = 0
 Estoque = {}
 while True:
@@ -27,6 +31,7 @@ while True:
                 print("Quantidade inicial nao pode ser negativa! ")
                 quantidade1 = int(input("Quantidade Inicial: "))
                 quantidadefinal = quantidade1
+                
                 if quantidade1 > 0:    
                     break
             while precouni < 0:
@@ -44,6 +49,7 @@ while True:
     elif x == 2:
         produto = input("Nome do Produto: ")
         if produto in Estoque:
+            ValorTotalEstoque -= Estoque[produto]*Estoque["Preco unitario {}".format(produto)]
             del Estoque[produto]
             del Estoque["Preco unitario {}".format(produto)]
         else:
