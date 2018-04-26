@@ -7,7 +7,7 @@ Created on Tue Apr 24 21:51:16 2018
 """
 
 import json
-with open ('Banco-de-Dados.json', 'r') as arquivo:
+with open ('teste.txt', 'r') as arquivo:
     Estoque = json.loads(arquivo.read())
     
 Estoque = {}
