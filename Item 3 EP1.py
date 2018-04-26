@@ -6,6 +6,10 @@ Created on Tue Apr 24 21:51:16 2018
 @author: gabrielzezze
 """
 
+import json
+with open ('Banco-de-Dados.json', 'r') as arquivo:
+    Estoque = json.loads(arquivo.read())
+    
 Estoque = {}
 while True:
     print("Controle de Estoque: ")

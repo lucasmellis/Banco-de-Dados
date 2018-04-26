@@ -7,7 +7,7 @@ Created on Mon Apr 23 20:58:07 2018
 """
 import json
 with open ('Banco-de-Dados.json', 'r') as arquivo:
-    dicionario = json.loads(arquivo.read())
+    Estoque = json.loads(arquivo.read())
     
 Estoque = {}
 while True:
